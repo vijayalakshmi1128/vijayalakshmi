@@ -1,14 +1,16 @@
-def factorial(n):
- 
-    # base case: if `n` is 0 or 1
-    if n < 1:
-        return 1
- 
-    # use the recurrence relation
-    return n * factorial(n - 1)
- 
- 
-if _name_ == '__main__':
- 
-    n = 5
-    print(f'The Factorial of {n} is', factorial(n))
+def linearSearchProduct(productList, targetProduct):
+  indices = []
+
+  for index, product in enumerate(productList):
+    if product == targetProduct:
+      indices.append(index)
+
+  return indices
+
+
+# Example usage:
+products = ["shoes", "boot", "loafer", "shoes", "sandal", "shoes"]
+target = "shoes"
+target2 = 'apple'
+result = linearSearchProduct(products, target)
+print(result)
